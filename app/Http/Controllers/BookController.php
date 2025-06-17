@@ -25,7 +25,7 @@ class BookController extends Controller
 
         $book = Book::create($data);
 
-        return redirect()->route('book.show', $book)->with('status', 'Book created successfully.');
+        return redirect()->route('book.index', $book)->with('status', 'Book created successfully.');
     }
 
     public function show(Book $book) {
@@ -37,6 +37,7 @@ class BookController extends Controller
     }
 
     public function update(Request $request) {
+
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'author' => 'required|string',

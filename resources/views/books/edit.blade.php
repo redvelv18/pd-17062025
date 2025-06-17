@@ -17,7 +17,7 @@
             </ul>
         </div>
     @endif
-
+<x-layout>
     <form action="{{ route('book.update', $editBook) }}" method="post">
         @csrf
         @method('put')
@@ -27,5 +27,6 @@
         <input type="date" name="released_at" placeholder="date goes here" value="{{ $editBook->released_at }}">
         <input type="submit" value="Update">
     </form>
+</x-layout>
 </body>
 </html>

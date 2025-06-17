@@ -11,7 +11,7 @@
             {{ session('status') }}
         </div>
     @endif
-
+<x-layout>
     <form action="{{ route('book.destroy') }}" method="post">
         @csrf
         @method('delete')
@@ -21,6 +21,6 @@
     <h2>{{ $singleBook->title }}</h2>
     <h3>{{ $singleBook->author }}</h3>
     <p>{{ $singleBook->released_at }}</p>
-    <a href="{{ route('book.index') }}">All books</a>
+</x-layout>
 </body>
 </html>

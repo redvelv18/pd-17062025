@@ -11,9 +11,8 @@
             {{ session('status') }}
         </div>
     @endif
-
+<x-layout>
     <h1>Books</h1>
-    <a href="{{ route('book.create') }}">Create a book</a>
     <ul>
         @foreach($books as $book)
             <li>
@@ -26,5 +25,6 @@
             </li>
         @endforeach
     </ul>
+</x-layout>
 </body>
 </html>

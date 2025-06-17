@@ -17,7 +17,7 @@
             </ul>
         </div>
     @endif
-
+<x-layout>
     <form action="{{ route('book.store') }}" method="post">
         @csrf
         <input type="text" name="title" placeholder="title goes here" value="{{ old('title') }}">
@@ -25,5 +25,6 @@
         <input type="date" name="released_at" placeholder="date goes here" value="{{ old('released_at') }}">
         <input type="submit" value="Create">
     </form>
+</x-layout>
 </body>
 </html>

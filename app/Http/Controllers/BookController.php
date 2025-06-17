@@ -37,7 +37,6 @@ class BookController extends Controller
     }
 
     public function update(Request $request) {
-
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'author' => 'required|string',
